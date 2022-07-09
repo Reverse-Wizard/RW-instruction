@@ -3,6 +3,7 @@ title: 你好！逆时巫师
 layout: article
 key: k202207100326
 cover: /assets/images/nswsbig.jpg
+tags: 欢迎
 header:
   theme: dark
   background: 'linear-gradient(135deg, rgb(34, 139, 87), rgb(139, 34, 139))'
