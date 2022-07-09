@@ -1,0 +1,10 @@
+node_modules
+vendor
+.bundle
+.sass-cache
+.jekyll-metadata
+.jekyll-cache
+*.gem
+
+#<removed/js>
+#<removed/css>
