@@ -17,3 +17,5 @@
 - run `git tag vx.x.x` to add a tag
 - run `git push && git push origin vx.x.x` to push
 - edit release on github.com
+
+- t
