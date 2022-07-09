@@ -1,5 +1,4 @@
-// # src / cross-fader.js
-// Copyright (c) 2017 Florian Klampfer <https://qwtel.com/>
+// Copyright (c) 2019 Florian Klampfer <https://qwtel.com/>
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -14,144 +13,136 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-import 'core-js/fn/array/find';
-import 'core-js/fn/function/bind';
+import { EMPTY, of } from 'rxjs';
+import { catchError, finalize, map, switchMap } from 'rxjs/operators';
 
-import Color from 'color';
+import { animate, fetchRx } from './common';
 
-import { empty, fromEvent, of } from 'rxjs';
-import { finalize, take, map } from 'rxjs/operators';
+const RE_CSS_URL = /url\s*\(['"]?(([^'"\\]|\\.)*)['"]?\)/u;
 
-import elemDataset from 'elem-dataset';
+/** @param {Document} doc */
+const calcHash = (doc) => {
+  const sidebar = doc.getElementById('_sidebar');
+  const sidebarBg = sidebar?.querySelector('.sidebar-bg');
+  const pageStyle = doc.getElementById('_pageStyle');
+  // const rule = Array.from(pageStyle?.sheet?.rules ?? []).find(r => r.selectorText === 'html');
+  // const accentColor = rule?.style.getPropertyValue('--accent-color') ?? '';
+  // const themeColor = rule?.style.getPropertyValue('--theme-color') ?? '';
+  return [
+    pageStyle?.innerText?.trim(),
+    sidebar?.classList,
+    sidebarBg?.classList,
+    sidebarBg?.style.backgroundImage,
+  ].join('\n');
+};
 
-import { animate } from './common';
-
-const { find } = Array.prototype;
-
-const BORDER_COLOR_FADE = 0.8;
-
-function updateStyle({ color = '#4fb1ba', themeColor } = {}) {
-  if (this.themeColor) {
-    this.themeColor.content = themeColor || color;
-  }
-
-  if (this.rules) {
-    try {
-      const c = Color(color);
-      const active = c.darken(0.1);
-
-      // .content a
-      this.rules[0].style.color = color;
-      this.rules[0].style.borderColor = c.fade(BORDER_COLOR_FADE).string();
-
-      // .content a:hover
-      this.rules[1].style.borderColor = color;
-
-      // :focus
-      this.rules[2].style.outlineColor = color;
-
-      // .btn-primary
-      this.rules[3].style.backgroundColor = color;
-      this.rules[3].style.borderColor = color;
-
-      // .btn-primary:focus
-      this.rules[4].style.boxShadow = `0 0 0 3px ${c.fade(0.5)}`;
-
-      // .btn-primary:hover
-      this.rules[5].style.backgroundColor = active;
-      this.rules[5].style.borderColor = active;
-
-      // .btn-primary:disabled
-      this.rules[6].style.backgroundColor = color;
-      this.rules[6].style.borderColor = color;
-
-      // .btn-primary:active
-      this.rules[7].style.backgroundColor = active;
-      this.rules[7].style.borderColor = active;
-
-      // ::selection or ::-moz-selection (assuming it is last in the list)
-      this.rules[this.rules.length - 1].style.backgroundColor = color;
-    } catch (e) { console.error(e); }
-  }
+/**
+ * Consider a URL external if either the protocol, hostname or port is different.
+ * @param {URL} param0
+ * @param {Location=} location
+ */
+function isExternal({ protocol, host }, location = window.location) {
+  return protocol !== location.protocol || host !== location.host;
 }
 
-// Given a dataset, generate some string we can use the check if anything has changed...
-function pseudoHash({
-  background, color, image, overlay,
-}) {
-  return `${color}${image || background}${overlay === '' ? 'overlay' : ''}`;
-}
+const objectURLs = new WeakMap();
 
-// Get an Observable that emits (once) when the `image` has been loaded,
-// or just remite immediately if there is no image, or it hasn't changed.
-// Note that the point is not to *use* the image object, just to make sure the image is in cache.
-function cacheImage$({ background, image }) {
-  if (background || !image || image === '' || image === 'none' || image === this.prevImage) {
-    return of({});
-  }
-
-  const imgObj = new Image();
-  const image$ = fromEvent(imgObj, 'load').pipe(
-    take(1),
-    finalize(() => { imgObj.src = ''; }),
-  );
-  imgObj.src = image;
-
-  return image$;
-}
-
-export default class CrossFader {
+export class CrossFader {
+  /** @param {number} fadeDuration */
   constructor(fadeDuration) {
-    const main = document.getElementById('_main');
-    const pageStyle = document.getElementById('_pageStyle');
-    const styleSheet = find.call(document.styleSheets, ss => ss.ownerNode === pageStyle) || {};
-
     this.sidebar = document.getElementById('_sidebar');
     this.fadeDuration = fadeDuration;
-    this.rules = styleSheet.cssRules || styleSheet.rules;
-    this.prevHash = pseudoHash(elemDataset(main));
-
-    this.themeColor = document.querySelector('meta[name="theme-color"]');
+    this.prevHash = calcHash(document);
+    this.themeColorEl = document.querySelector('meta[name="theme-color"]');
   }
 
-  fetchImage(main) {
-    const dataset = elemDataset(main);
-    const {
-      background, color, image, overlay,
-    } = dataset;
+  /** @param {Document} newDocument */
+  fetchImage2(newDocument) {
+    const { backgroundImage = '' } = newDocument.querySelector('.sidebar-bg')?.style ?? {};
+    const result = RE_CSS_URL.exec(backgroundImage);
+    if (!result) {
+      return of('');
+    }
 
-    // HACK: Using `dataset` here to store some intermediate data
-    const hash = pseudoHash(dataset);
-    if (hash === this.prevHash) return empty();
+    const url = new URL(result[1], window.location.origin);
 
-    return cacheImage$.call(this, dataset)
-      .pipe(map(() => {
-        const div = document.createElement('div');
-        div.classList.add('sidebar-bg');
-        if (image !== 'none' && overlay === '') div.classList.add('sidebar-overlay');
-        if (background) div.style.background = background;
-        else {
-          div.style.backgroundColor = color;
-          if (image !== '' && image !== 'none') div.style.backgroundImage = `url(${image})`;
+    return fetchRx(url.href, {
+      method: 'GET',
+      headers: { Accept: 'image/*' },
+      ...(isExternal(url) ? { mode: 'cors' } : {}),
+    }).pipe(
+      switchMap((r) => r.blob()),
+      map((blob) => URL.createObjectURL(blob)),
+      catchError(() => of(url.href)),
+    );
+  }
+
+  /** @param {Document} newDocument */
+  fetchImage(newDocument) {
+    const hash = calcHash(newDocument);
+    if (hash === this.prevHash) return EMPTY;
+
+    return this.fetchImage2(newDocument).pipe(
+      map((objectURL) => {
+        /** @type {HTMLDivElement} */
+        const div = newDocument.querySelector('.sidebar-bg') ?? document.createElement('div');
+
+        if (objectURL) {
+          div.style.backgroundImage = `url(${objectURL})`;
+          objectURLs.set(div, objectURL);
         }
-        return [div, dataset, hash];
-      }));
+
+        return [div, hash, newDocument];
+      }),
+    );
   }
 
-  fade([prevDiv], [div, dataset, hash]) {
-    prevDiv.parentNode.insertBefore(div, prevDiv.nextElementSibling);
+  /** @param {Document} newDocument */
+  updateStyle(newDocument) {
+    const classList = newDocument.getElementById('_sidebar')?.classList;
+    if (classList) this.sidebar.setAttribute('class', classList);
 
-    updateStyle.call(this, dataset);
+    if (this.themeColorEl) {
+      const themeColor = newDocument.head.querySelector('meta[name="theme-color"]')?.content;
+      if (themeColor) {
+        window.setTimeout(() => {
+          if (this.themeColorEl) {
+            this.themeColorEl.content = themeColor;
+          }
+        }, 250);
+      }
+    }
+
+    try {
+      const pageStyle = document.getElementById('_pageStyle');
+      const newPageStyle = newDocument.getElementById('_pageStyle');
+      if (!newPageStyle) return;
+      pageStyle?.parentNode?.replaceChild(newPageStyle, pageStyle);
+    } catch (e) {
+      if (process.env.DEBUG) console.error(e);
+    }
+  }
+
+  /**
+   * @param {[HTMLDivElement]} param0
+   * @param {[HTMLDListElement, string, Document]} param1
+   */
+  fade([prevDiv], [div, hash, newDocument]) {
+    prevDiv?.parentNode?.insertBefore(div, prevDiv.nextElementSibling);
+
+    this.updateStyle(newDocument);
 
     // Only update the prev hash after we're actually in the fade stage
     this.prevHash = hash;
 
-    return animate(div, [
-      { opacity: 0 },
-      { opacity: 1 },
-    ], {
+    return animate(div, [{ opacity: 0 }, { opacity: 1 }], {
       duration: this.fadeDuration,
-    })
-      .pipe(finalize(() => prevDiv.parentNode.removeChild(prevDiv)));
+      easing: 'ease',
+    }).pipe(
+      finalize(() => {
+        if (objectURLs.has(prevDiv)) URL.revokeObjectURL(objectURLs.get(prevDiv));
+        prevDiv?.parentNode?.removeChild(prevDiv);
+      }),
+    );
   }
 }

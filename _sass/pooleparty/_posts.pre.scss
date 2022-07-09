@@ -1,24 +1,19 @@
 // Copyright (c) 2017 Florian Klampfer <https://qwtel.com/>
 //
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
 //
-// The above copyright notice and this permission notice shall be included in all
-// copies or substantial portions of the Software.
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
 //
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-// SOFTWARE.
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-// <<<<< INLINE
+// <<< INLINE
 .page {
   margin-bottom: 3em;
 
@@ -27,7 +22,27 @@
   }
 
   > header {
+    position: relative;
     margin-bottom: 2rem;
+  }
+
+  .aspect-ratio.sixteen-nine.lead {
+    @extend .border-radius;
+  }
+}
+
+body:not(.no-third-column) {
+  .page > header {
+    > .lead + .note-sm, 
+    > a.no-hover + .note-sm {
+      @media screen and (min-width: $break-point-dynamic) {
+        position: absolute;
+        right: -25rem;
+        width: 21rem;
+        bottom: 0;
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
@@ -36,22 +51,52 @@
 
 // Meta data line below post title
 .post-date {
-  display: block;
-  margin-top: -0.5rem;
-  margin-bottom: 1rem;
-  color: $gray;
+  @extend .h4;
+  display: flex;
+  justify-content: space-between;
+  margin-top: -.6rem;
+  height: 2rem;
+  margin-bottom: .85rem;
+  color: var(--gray);
+
+  > .ellipsis {
+    cursor: pointer;
+  }
+
+  [class^="icon-"] { 
+    display: inline-block; 
+    font-size: smaller;
+    margin-right: .25rem;
+  }
 }
-// >>>>>
-// <<<<< LINK
-hr.dingbat {
-  border: 0;
+// >>>
+// <<< LINK
+clap-button {
+  margin-left: auto;
+  margin-right: auto;
+  --clap-button-color: var(--accent-color);
 }
 
-hr.dingbat::after {
-  content: "\2756"; // ❖
-  display: block;
-  text-align: center;
-  font-size: 1.5rem;
-  color: #ddd;
+clap-button + p.message {
+  margin: -2rem auto 0;
+  max-width: 32rem;
+  font-size: smaller
 }
-// >>>>>
+
+hr.dingbat {
+  border: 0;
+  &:after{
+    content: "\2756";
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--menu-text);
+  }
+}
+
+@media print {
+  .page {
+    margin-bottom: 0
+  }
+}
+// >>>

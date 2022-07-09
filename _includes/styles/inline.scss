@@ -1,73 +1,50 @@
-// Copyright (c) 2017 Florian Klampfer <https://qwtel.com/>
+// Copyright (c) 2019 Florian Klampfer <https://qwtel.com/>
 //
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
 //
-// The above copyright notice and this permission notice shall be included in all
-// copies or substantial portions of the Software.
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
 //
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-// SOFTWARE.
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-{% assign font_heading = site.font_heading | default:"'Roboto Slab', Helvetica, Arial, sans-serif" %}
-{% assign font =         site.font         | default:"'Noto Sans', Helvetica, Arial, sans-serif" %}
-
-$font-family-heading: {{ font_heading }};
-$font-family: {{ font }};
-
+{% include styles/variables.scss %}
 @import "variables";
 @import "my-variables";
 @import "mixins";
 
-// @import "reboot-mod";
+@import "html";
 
+@import "pooleparty/__inline__/base";
+@import "pooleparty/__inline__/type";
+@import "pooleparty/__inline__/table";
+@import "pooleparty/__inline__/footer";
+@import "pooleparty/__inline__/footnotes";
+@import "pooleparty/__inline__/code";
+@import "pooleparty/__inline__/posts";
+@import "pooleparty/__inline__/related";
+@import "pooleparty/__inline__/read-more";
+@import "pooleparty/__inline__/message";
+@import "pooleparty/__inline__/pagination";
 
-@import "pooleparty/__inline/base";
-@import "pooleparty/__inline/type";
-@import "pooleparty/__inline/table";
-@import "pooleparty/__inline/footer";
-@import "pooleparty/__inline/footnotes";
-@import "pooleparty/__inline/code";
-@import "pooleparty/__inline/posts";
-@import "pooleparty/__inline/related";
-@import "pooleparty/__inline/message";
-@import "pooleparty/__inline/pagination";
-
-@import "hydejack/__inline/base";
-@import "hydejack/__inline/sidebar";
-@import "hydejack/__inline/social";
-@import "hydejack/__inline/menu";
-@import "hydejack/__inline/content";
-@import "hydejack/__inline/avatar";
-@import "hydejack/__inline/katex";
-@import "hydejack/__inline/footer";
-
-// {% unless site.hydejack.no_mark_external or site.no_mark_external %}
-//   @import "hydejack/__link/mark-external";
-// {% endunless %}
-// {% unless site.hydejack.no_break_layout %}
-//   @import "hydejack/__link/break-layout";
-// {% endunless %}
-
-// @import "syntax";
-// @import "spinner";
+@import "hydejack/__inline__/base";
+@import "hydejack/__inline__/utilities";
+@import "hydejack/__inline__/links";
+@import "hydejack/__inline__/images";
+@import "hydejack/__inline__/sidebar";
+@import "hydejack/__inline__/social";
+@import "hydejack/__inline__/menu";
+@import "hydejack/__inline__/toc";
+@import "hydejack/__inline__/content";
+@import "hydejack/__inline__/avatar";
+@import "hydejack/__inline__/katex";
+@import "hydejack/__inline__/footer";
 
 @import "my-inline";
-// @import "my-style";
 
-{% unless site.hydejack.no_google_fonts or site.no_google_fonts %}
-  {% assign font = font | split:',' | shift | join:',' %}
-  {% assign font_heading = font_heading | split:',' | shift | join:',' %}
-{% endunless %}
-
-html { font-family: {{ font | default:"serif" }}; }
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading { font-family: {{ font_heading | default:"serif" }}; }
+{% include styles/common.scss %}

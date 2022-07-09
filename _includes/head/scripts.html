@@ -1,44 +1,19 @@
-<script>
-  {% include scripts/load-js-deferred.min.js %}{% include scripts/loadCSS.min.js %}{% include scripts/cssrelpreload.min.js %}
-  window._noPushState = {{ site.hydejack.no_push_state | default:site.disable_push_state | default:false }};
-  window._noDrawer = {{ site.hydejack.no_drawer | default:site.disable_drawer | default:false }};
-</script>
-
-<!--[if gt IE 8]><!---->
-{% assign google_fonts = site.google_fonts | default:"Roboto+Slab:700|Noto+Sans:400,400i,700,700i" %}
-{% capture icons_url %}{% link assets/icomoon/style.css %}{% endcapture %}
-<script>
-  WebFontConfig = {
-    {% unless site.hydejack.no_google_fonts or site.no_google_fonts %}
-    google: {
-      families: ['{{ google_fonts | split:"|" | join:"','" }}']
-    },
-    {% endunless %}
-
-    custom: {
-      families: ['icomoon'],
-      urls: ['{{ icons_url | relative_url }}']
-    }
+<script>{% include scripts/load-js.min.js %}{% include scripts/loadCSS.min.js %}{% include scripts/cssrelpreload.min.js %}!function(w) {
+  w._baseURL = '{{    "/"           | relative_url }}';
+  w._publicPath = '{{ "/assets/js/" | relative_url }}';
+  w._noPushState = {{ site.hydejack.no_push_state | default:site.disable_push_state | default:false }};
+  w._noDrawer = {{    site.hydejack.no_drawer     | default:site.disable_drawer     | default:false }};
+  w._noNavbar = {{    site.hydejack.no_navbar     | default:false }};
+  w._noToc = {{       site.hydejack.no_toc        | default:false }};
+  w._noSearch = {{    site.hydejack.no_search     | default:false }};
+  w._search = {
+    DATA_URL: '{{ "/assets/sitedata.json?no-cache" | relative_url }}',
+    STORAGE_KEY: 'mini-search{{ "/" | relative_url }}',
+    INDEX_KEY: 'index--{{ site.time | date_to_xmlschema }}',
   };
-  (function(d) {
-    var wf = d.createElement('script'), s = d.scripts[0];
-    wf.src = "{{ '/assets/bower_components/webfontloader/webfontloader.js' | relative_url }}";
-    s.parentNode.insertBefore(wf, s);
-  }(document));
-</script>
-<!--<![endif]-->
+  w._clapButton = {% if site.clap_button or jekyll.environment != 'production' %}true{% else %}false{% endif %};
+}(window);</script>
 
-<noscript>
-  {% assign font_heading = site.font_heading | default:"'Roboto Slab', Helvetica, Arial, sans-serif" %}
-  {% assign font         = site.font         | default:"'Noto Sans', Helvetica, Arial, sans-serif" %}
-
-  {% unless site.hydejack.no_google_fonts or site.no_google_fonts %}
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ google_fonts | uri_escape }}">
-    <style>
-      html { font-family: {{ font }} }
-      h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading { font-family: {{ font_heading }} }
-    </style>
-  {% endunless %}
-
-  <link rel="stylesheet" href="{{ icons_url | relative_url }}">
-</noscript>
+{% if site.kramdown.math_engine == 'mathjax' %}
+<script async src="{{ 'assets/bower_components/MathJax/es5/tex-mml-chtml.js' | relative_url }}" id="_MathJax"></script>
+{% endif %}

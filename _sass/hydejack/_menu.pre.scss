@@ -1,86 +1,143 @@
 // Copyright (c) 2017 Florian Klampfer <https://qwtel.com/>
 //
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
 //
-// The above copyright notice and this permission notice shall be included in all
-// copies or substantial portions of the Software.
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
 //
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-// SOFTWARE.
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-// <<<<< INLINE
-.fixed-top {
+$navbar-height: 5rem;
+
+// <<< inline
+.fixed-common {
   position: fixed;
-  top: 0;
   left: 0;
   width: 100%;
   z-index: 2;
 }
 
-.navbar > .content {
-  padding-top: 0;
-  padding-bottom: 0;
-  min-height: 0;
-  height: 0;
-  color: $gray;
+.fixed-top {
+  @extend .fixed-common;
+  top: 0;
 }
 
+.fixed-bottom {
+  @extend .fixed-common;
+  bottom: 0;
+}
+// >>>
+
+.navbar {
+  @extend .color-transition; // inline
+
+  > .content {
+    // <<< inline
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: 0;
+    max-height: $navbar-height;
+    // >>>
+
+    // <<< link
+    $shadow-padding: 3rem;
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: calc(100% - #{$shadow-padding * 2});
+      height: $navbar-height;
+      left: $shadow-padding;
+      margin: auto;
+      box-shadow: 0 0 2rem rgba(0,0,0,0.25);
+      z-index: -1;
+    }
+    // >>>
+  }
+
+  // <<< link
+  &.fixed-top {
+    > .content {
+      &::before {
+        bottom: 1px;
+      }
+    }
+  }
+
+  &.fixed-bottom {
+    > .content {
+      &::before {
+        top: 1px;
+      }
+    }
+  }
+  // >>>
+}
+
+// <<< inline
 .nav-btn-bar {
-  margin-left: -.875rem;
+  @extend .color-transition;
+  margin: 0 -1rem;
+  background-color: white; // IE11
+  background-color: var(--body-bg);
+  height: $navbar-height;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  > :first-child, > :last-child {
+    border: none;
+  }
 }
 
 .nav-btn {
-  display: inline-block;
-  padding: 1.75rem .875rem;
-  border-bottom: none;
-  color: $gray!important;
+  @extend .color-transition;
+  background: none;
+  border: none;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.25rem;
+  height: $navbar-height;
+  color: var(--menu-text);
+  border-right: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+  margin-left: -1px;
 }
-// >>>>>
+// >>>
 
-// <<<< LINK
+// <<< link
+a.nav-btn, button.nav-btn {
+  cursor: pointer;
+  &:hover, &:focus {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05));
+  }
+}
+
+.nav-span {
+  flex: 1;
+}
+
 .animation-main {
   opacity: 0;
-  will-change: opacity;
   pointer-events: none;
 }
 
-.loading {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 1.75rem 1rem;
-}
-// >>>>
-
-#_menu {
-  @media screen and (min-width: $break-point-3) {
-    position: absolute; // inline
-    left: -9999px; // inline
-    &:focus { position: static; } // link
-  }
-  @media print { display: none; } // link
+#_navbar {
+  z-index: 3;
+  background-color: var(--body-bg);
 }
 
-// <<<< LINK
-#_cookies-banner  {
-  .nav-btn { padding: 1.75rem 0 }
-  .nav-btn-bar {
-    margin: 0 2rem;
-    @media screen and (min-width: $break-point-3) {
-      margin: 0 2rem 0 0;
-    }
-  }
+.navbar {
+  .loading { display: none; }
   @media print { display: none; }
 }
-// >>>>
+// >>>
