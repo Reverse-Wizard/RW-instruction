@@ -29,14 +29,14 @@ p {
     margin-bottom:35px;
 }
 hr {
-    border-top: 1px solid rgb(27, 106, 131);
+    border-top: 1px solid rgb(0, 0, 0);
 margin: 0px 100px 0px 100px
 }
 /* =============================================================
    NAVBAR STYLES
  ============================================================ */
 .navbar-inverse {
-background-color: rgb(185 185 185 / 75%);
+background-color: rgba(94, 94, 94, 0.75);
 border-color: transparent;
 }
 
@@ -108,7 +108,7 @@ background-image: linear-gradient(to right,rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0
     height:20px;
 }
 .carousel-indicators .active {
-    border:5px solid rgba(0, 231, 222, 0.72);
+    border:5px solid rgba(214, 214, 214, 0.281);
     width:20px;
     height:20px;
 	background-color:transparent;
