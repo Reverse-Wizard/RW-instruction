@@ -129,8 +129,8 @@ comments:
   gitalk:
     clientID    : b1fc0c45bf7d4aadb98f # GitHub Application Client ID
     clientSecret: c40097ed9a8f3a7d349d53fcca45519c22856696 # GitHub Application Client Secret
-    repository  : gitalkComment # GitHub repo
-    owner       : POPCORNBOOM # GitHub repo owner
+    repository  : Comments # GitHub repo
+    owner       : Reverse-Wizard # GitHub repo owner
     admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
       - POPCORNBOOM # - your GitHub Id
 
