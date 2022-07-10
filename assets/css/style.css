@@ -36,13 +36,13 @@ margin: 0px 100px 0px 100px
    NAVBAR STYLES
  ============================================================ */
 .navbar-inverse {
-background-color: rgba(231, 255, 254, 0.747);
+background-color: rgba(2, 179, 170, 0.747);
 border-color: transparent;
 }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
 background-color: transparent;
-border-bottom: 4px solid rgba(231, 255, 254, 0.747);
+border-bottom: 4px solid rgba(2, 179, 170, 0.747);
 
 
 }
@@ -108,7 +108,7 @@ background-image: linear-gradient(to right,rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0
     height:20px;
 }
 .carousel-indicators .active {
-    border:5px solid rgba(231, 255, 254, 0.747);
+    border:5px solid rgba(0, 231, 222, 0.72);
     width:20px;
     height:20px;
 	background-color:transparent;
@@ -121,15 +121,15 @@ background-image: linear-gradient(to right,rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0
 
 .custom-btn-1 {
     border-radius:0px;
-    background-color:rgb(231, 255, 254);
-    border:2px solid rgba(186, 212, 211, 0.747);
+    background-color:rgb(2, 179, 170);
+    border:2px solid rgba(2, 179, 170, 0.747);
     border-radius:25px;
     margin:5px;
     color:#fff;
 }
     .custom-btn-1:hover {
          color:#fff;
-          background-color:rgba(186, 212, 211, 0.747);
+          background-color:rgba(2, 179, 170, 0.747);
     }
 
 /* =============================================================
@@ -147,6 +147,6 @@ background-color:rgba(214, 214, 214, 0.281);;
 .footer {
     text-align:right;
     color:#fff;
-    background-color:rgba(231, 255, 254, 0.747);
+    background-color:rgba(2, 179, 170, 0.938);
     padding:20px;
 }
