@@ -1,0 +1,21 @@
+/* =============================================================
+   head STYLES
+ ============================================================ */
+
+.c-sidebar-author .c-author__cover {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #cfcfdd;
+  }
+  .c-sidebar-author .c-author__cover img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: 0.35s;
+  }
+  .c-sidebar-author .c-author__cover img:hover {
+    transform: scale3d(0.9, 0.9, 1);
+  }
