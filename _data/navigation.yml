@@ -51,10 +51,12 @@ header:
       # @end locale config
     url: /about.html
 
-doc-fires:
-  - title: 火焰法术
+cards-tr:
+  - title: 宝藏
     children:
-    - title: 传承之火
-      url: /2022/07/10/传承之火.html
-    - title: 龙之吐息
-      url: /2022/07/10/龙之吐息.html
+      - title: 传承之火
+        url: /tr/chuanchengzhihuo
+      - title: 龙之吐息
+        url: /tr/longzhituxi
+      - title: 燃烧权杖
+        url: /tr/ranshaoquanzhang
