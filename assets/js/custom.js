@@ -48,17 +48,6 @@
                       { src: 'assets/img/5.jpg', fade: 1000, delay: 9000 },
                       { src: 'assets/img/6.jpg', fade: 1000, delay: 9000 },
                       { src: 'assets/img/7.jpg', fade: 1000, delay: 9000 },
-                      { src: 'assets/img/8.jpg', fade: 1000, delay: 9000 },
-                      { src: 'assets/img/9.png', fade: 1000, delay: 9000 },
-                      { src: 'assets/img/10.png', fade: 1000, delay: 9000 },
-                      { src: 'assets/img/11.png', fade: 1000, delay: 9000 },
-                      { src: 'assets/img/12.png', fade: 1000, delay: 9000 },
-                      { src: 'assets/img/13.png', fade: 1000, delay: 9000 },
-                      { src: 'assets/img/14.png', fade: 1000, delay: 9000 },
-                      { src: 'assets/img/15.png', fade: 1000, delay: 9000 },
-                      { src: 'assets/img/16.png', fade: 1000, delay: 9000 },
-                      { src: 'assets/img/17.png', fade: 1000, delay: 9000 },
-                      { src: 'assets/img/18.png', fade: 1000, delay: 9000 }, 
                     ]
                 })('overlay', {
                     /** SLIDESHOW OVERLAY IMAGE **/
