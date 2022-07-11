@@ -92,3 +92,46 @@ cards-tr:
         url: /tr/longzhituxi
       - title: 燃烧权杖
         url: /tr/ranshaoquanzhang
+
+
+cards-ad:
+  - title: 火焰
+    children:
+      - title: 传承之火
+        url: /tr/chuanchengzhihuo
+      - title: 龙之吐息
+        url: /tr/longzhituxi
+      - title: 燃烧权杖
+        url: /tr/ranshaoquanzhang
+  - title: 冰霜
+    children:
+      - title: 传承之火
+        url: /tr/chuanchengzhihuo
+      - title: 龙之吐息
+        url: /tr/longzhituxi
+      - title: 燃烧权杖
+        url: /tr/ranshaoquanzhang
+  - title: 奥能
+    children:
+      - title: 传承之火
+        url: /tr/chuanchengzhihuo
+      - title: 龙之吐息
+        url: /tr/longzhituxi
+      - title: 燃烧权杖
+        url: /tr/ranshaoquanzhang
+  - title: 无派系
+    children:
+      - title: 传承之火
+        url: /tr/chuanchengzhihuo
+      - title: 龙之吐息
+        url: /tr/longzhituxi
+      - title: 燃烧权杖
+        url: /tr/ranshaoquanzhang
+  - title: 秘术
+    children:
+      - title: 传承之火
+        url: /tr/chuanchengzhihuo
+      - title: 龙之吐息
+        url: /tr/longzhituxi
+      - title: 燃烧权杖
+        url: /tr/ranshaoquanzhang
