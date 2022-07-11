@@ -230,7 +230,7 @@ defaults:
   ## samples
   - scope:
       path: ""
-      type: sample_page
+      type: notcardposts
     values:
       nav_key: samples
   - scope:
