@@ -1,6 +1,32 @@
 header:
   - titles:
       # @start locale config
+      en      : &EN       Official-Website
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      zh-Hans : &ZH_HANS  官网
+      zh      : *ZH_HANS
+      zh-CN   : *ZH_HANS
+      zh-SG   : *ZH_HANS
+      zh-Hant : &ZH_HANT  官網
+      zh-TW   : *ZH_HANT
+      zh-HK   : *ZH_HANT
+      ko      : &KO       홈페이지
+      ko-KR   : *KO
+      fr      : *FR       
+      fr-BE   : *FR
+      fr-CA   : *FR
+      fr-CH   : *FR
+      fr-FR   : *FR
+      fr-LU   : *FR
+      tr      : *TR       
+      # @end locale config
+    url: /home
+
+  - titles:
+      # @start locale config
       en      : &EN       Card-Inquiry
       en-GB   : *EN
       en-US   : *EN
@@ -15,13 +41,13 @@ header:
       zh-HK   : *ZH_HANT
       ko      : &KO       카드-조회
       ko-KR   : *KO
-      fr      : &FR       
+      fr      : *FR       
       fr-BE   : *FR
       fr-CA   : *FR
       fr-CH   : *FR
       fr-FR   : *FR
       fr-LU   : *FR
-      tr      : &TR       
+      tr      : *TR       
       # @end locale config
     url: /archive.html
 
@@ -41,15 +67,44 @@ header:
       zh-HK   : *ZH_HANT
       ko      : &KO       소개
       ko-KR   : *KO
-      fr      : &FR       À propos
+      fr      : *FR
       fr-BE   : *FR
       fr-CA   : *FR
       fr-CH   : *FR
       fr-FR   : *FR
       fr-LU   : *FR
-      tr      : &TR       Hakkında
+      tr      : *TR       
       # @end locale config
     url: /about.html
+
+  - titles:
+      # @start locale config
+      en      : &EN       Docs
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      zh-Hans : &ZH_HANS  文献
+      zh      : *ZH_HANS
+      zh-CN   : *ZH_HANS
+      zh-SG   : *ZH_HANS
+      zh-Hant : &ZH_HANT  文獻
+      zh-TW   : *ZH_HANT
+      zh-HK   : *ZH_HANT
+      ko      : &KO       문헌
+      ko-KR   : *KO
+      fr      : *FR
+      fr-BE   : *FR
+      fr-CA   : *FR
+      fr-CH   : *FR
+      fr-FR   : *FR
+      fr-LU   : *FR
+      tr      : *TR
+      # @end locale config
+    url: /documents.html
+
+
+
 
 cards-tr:
   - title: 火焰
