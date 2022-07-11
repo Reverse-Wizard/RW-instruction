@@ -198,10 +198,21 @@ exclude:
   - /docs
   - /node_modules
   - /screenshots
-  - /test
   - /vendor
 
+
+collections:
+  notcardposts:
+    output: true
+
 defaults:
+  ## home
+  - scope:
+      path: ""
+    values:
+      articles:
+        excerpt_type: text
+  ## posts
   - scope:
       path: ""
       type: posts
@@ -209,11 +220,35 @@ defaults:
       layout: article
       sharing: true
       license: true
+      category: post
       aside:
         toc: true
-      show_edit_on_github: true
-      show_subscribe: true
+      show_edit_on_github: false
+      show_subscribe: false
       pageview: true
+      # lightbox: true
+  ## samples
+  - scope:
+      path: ""
+      type: sample_page
+    values:
+      nav_key: samples
+  - scope:
+      path: ""
+      type: sample_articles
+    values:
+      nav_key: samples
+      show_date: false
+  - scope:
+      path: ""
+      type: sample_languages
+    values:
+      layout: article
+      nav_key: samples
+      show_date: false
+
+
+
 
 
 ## => Plugins
