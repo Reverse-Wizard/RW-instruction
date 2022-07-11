@@ -27,6 +27,32 @@ header:
 
   - titles:
       # @start locale config
+      en      : &EN       overview
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      zh-Hans : &ZH_HANS  概览
+      zh      : *ZH_HANS
+      zh-CN   : *ZH_HANS
+      zh-SG   : *ZH_HANS
+      zh-Hant : &ZH_HANT  概覽
+      zh-TW   : *ZH_HANT
+      zh-HK   : *ZH_HANT
+      ko      : &KO       개요
+      ko-KR   : *KO
+      fr      : *FR
+      fr-BE   : *FR
+      fr-CA   : *FR
+      fr-CH   : *FR
+      fr-FR   : *FR
+      fr-LU   : *FR
+      tr      : *TR
+      # @end locale config
+    url: /
+
+  - titles:
+      # @start locale config
       en      : &EN       Card-Inquiry
       en-GB   : *EN
       en-US   : *EN
