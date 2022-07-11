@@ -200,11 +200,12 @@ exclude:
   - /screenshots
   - /vendor
 
-
+# collections_dir: notcardposts
 collections:
   notcardposts:
     output: true
-
+  instructions:
+    output: true
 defaults:
   ## home
   - scope:
@@ -232,20 +233,13 @@ defaults:
       path: ""
       type: notcardposts
     values:
-      nav_key: samples
+      nav_key: documents
+
   - scope:
       path: ""
-      type: sample_articles
+      type: instructions
     values:
-      nav_key: samples
-      show_date: false
-  - scope:
-      path: ""
-      type: sample_languages
-    values:
-      layout: article
-      nav_key: samples
-      show_date: false
+      nav_key: documents
 
 
 
