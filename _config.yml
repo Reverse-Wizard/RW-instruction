@@ -200,9 +200,9 @@ exclude:
   - /screenshots
   - /vendor
 
-# collections_dir: notcardposts
+# collections_dir: otherposts
 collections:
-  notcardposts:
+  otherposts:
     output: true
   instructions:
     output: true
@@ -231,7 +231,7 @@ defaults:
   ## samples
   - scope:
       path: ""
-      type: notcardposts
+      type: otherposts
     values:
       nav_key: documents
 

@@ -4,9 +4,12 @@ title: 文献
 permalink: /documents.html
 ---
 <div class="layout--articles">
-
   <section class="my-5">
-    <header><h2 id="notcardposts">其他文章</h2></header>
-    {%- include article-list.html articles=site.notcardposts type='grid' -%}
+    <header><h2 id="otherposts">其他文章</h2></header>
+    {%- include article-list.html articles=site.otherposts type='grid' -%}
+  </section>
+  <section class="my-5">
+    <header><h2 id="otherposts">集合概览</h2></header>
+    {%- include article-list.html articles=site.otherposts type='grid' -%}
   </section>
 </div>
