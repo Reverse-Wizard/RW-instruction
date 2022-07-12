@@ -1,8 +1,8 @@
 ---
 layout: articles
 title: 宝藏-火焰
-permalink: /articles/tr-fire.html
-key: articles-tr-fire
+permalink: /documents/tr-fire.html
+key: documents-tr-fire
 cover: /cardAssetssmall/treasures/front/33/图片2.png
 articles:
   data_source: site.posts.cards.treasures.fire
