@@ -6,5 +6,7 @@ key: documents-tr-fire
 cover: /assets/images/cardAssetssmall/treasures/front/33/图片2.png
 articles:
   data_source: site.tags.火焰
+  type: grid
+  size: sm
 ---
 
