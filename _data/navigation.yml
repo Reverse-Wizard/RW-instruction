@@ -133,46 +133,249 @@ header:
 
 
 cards-tr:
-  - title: 火焰
-    children:
-      - title: 传承之火
-        url: /tr/CHUANCHENGZHIHUO
-      - title: 龙之吐息
-        url: /tr/LONGZHITUXI
-      - title: 燃烧权杖
-        url: /tr/RANSHAOQUANZHANG
-  - title: 冰霜
-    children:
-      - title: 传承之火
-        url: /tr/CHUANCHENGZHIHUO
-      - title: 龙之吐息
-        url: /tr/LONGZHITUXI
-      - title: 燃烧权杖
-        url: /tr/RANSHAOQUANZHANG
   - title: 奥能
     children:
-      - title: 传承之火
-        url: /tr/CHUANCHENGZHIHUO
-      - title: 龙之吐息
-        url: /tr/LONGZHITUXI
-      - title: 燃烧权杖
-        url: /tr/RANSHAOQUANZHANG
+      - title:  双发魔弹
+        url:  /tr/SHUANGFAMODAN.html
+      - title:  回响
+        url:  /tr/HUIXIANG.html
+      - title:  回溯
+        url:  /tr/HUISU.html
+      - title:  奇思妙想
+        url:  /tr/QISIMIAOXIANG.html
+      - title:  奥术冲击
+        url:  /tr/AOSHUCHONGJI.html
+      - title:  奥术飞刀
+        url:  /tr/AOSHUFEIDAO.html
+      - title:  奥术飞弹
+        url:  /tr/AOSHUFEIDAN.html
+      - title:  最终棱镜
+        url:  /tr/ZUIZHONGLENGJING.html
+      - title:  汲取
+        url:  /tr/JIQU.html
+      - title:  精神统一
+        url:  /tr/JINGSHENTONGYI.html
+      - title:  聚能一击
+        url:  /tr/JUNENGYIJI.html
+      - title:  肃清的一刀
+        url:  /tr/SUQINGDEYIDAO.html
+      - title:  观星杖
+        url:  /tr/GUANXINGZHANG.html
+      - title:  觉醒
+        url:  /tr/JUEXING.html
+      - title:  辉光法杖
+        url:  /tr/HUIGUANGFAZHANG.html
+      - title:  飞弹
+        url:  /tr/FEIDAN.html
+      - title:  魔力迸发
+        url:  /tr/MOLIBENGFA.html
+  - title: 火焰
+    children:
+      - title:  传承之火
+        url:  /tr/CHUANCHENGZHIHUO.html
+      - title:  燃烧权杖
+        url:  /tr/RANSHAOQUANZHANG.html
+      - title:  龙之吐息
+        url:  /tr/LONGZHITUXI.html
+      - title:  大红莲之术
+        url:  /tr/DAHONGLIANZHISHU.html
+      - title:  月火术
+        url:  /tr/YUEHUOSHU.html
+      - title:  火力四射
+        url:  /tr/HUOLISISHE.html
+      - title:  火法师之杖
+        url:  /tr/HUOFASHIZHIZHANG.html
+      - title:  火焰魔典
+        url:  /tr/HUOYANMODIAN.html
+      - title:  火花出逃
+        url:  /tr/HUOHUACHUTAO.html
+      - title:  火花的恶作剧
+        url:  /tr/HUOHUADEEZUOJU.html
+      - title:  火苗
+        url:  /tr/HUOMIAO.html
+      - title:  灼烧
+        url:  /tr/ZHUOSHAO.html
+      - title:  炎爆术
+        url:  /tr/YANBAOSHU.html
+      - title:  点燃
+        url:  /tr/DIANRAN.html
+      - title:  烈焰符文
+        url:  /tr/LIEYANFUWEN.html
+      - title:  诡异的火把
+        url:  /tr/GUIYIDEHUOBA.html
+      - title:  野火
+        url:  /tr/YEHUO.html
+  - title: 冰霜
+    children:
+      - title:  冰之圆舞曲
+        url:  /tr/BINGZHIYUANWUQU.html
+      - title:  冰爆
+        url:  /tr/BINGBAO.html
+      - title:  冰锥
+        url:  /tr/BINGZHUI.html
+      - title:  冰霜秘典
+        url:  /tr/BINGSHUANGMIDIAN.html
+      - title:  冰霜结界
+        url:  /tr/BINGSHUANGJIEJIE.html
+      - title:  凛冬将至
+        url:  /tr/LINDONGJIANGZHI.html
+      - title:  寒冰祈咒
+        url:  /tr/HANBINGQIZHOU.html
+      - title:  寒冰箭
+        url:  /tr/HANBINGJIAN.html
+      - title:  暴风雪
+        url:  /tr/BAOFENGXUE.html
+      - title:  永恒冰晶
+        url:  /tr/YONGHENGBINGJING.html
+      - title:  深度冻结
+        url:  /tr/SHENDUDONGJIE.html
+      - title:  绝对零度
+        url:  /tr/JUEDUILINGDU.html
+      - title:  银冰之枪
+        url:  /tr/YINBINGZHIQIANG.html
+      - title:  银冰吐息
+        url:  /tr/YINBINGTUXI.html
+      - title:  银白天平
+        url:  /tr/YINBAITIANPING.html
+      - title:  雪崩
+        url:  /tr/XUEBENG.html
+      - title:  霜华绽放
+        url:  /tr/SHUANGHUAZHANFANG.html
   - title: 无派系
     children:
-      - title: 传承之火
-        url: /tr/CHUANCHENGZHIHUO
-      - title: 龙之吐息
-        url: /tr/LONGZHITUXI
-      - title: 燃烧权杖
-        url: /tr/RANSHAOQUANZHANG
+      - title:  不思议之杖
+        url:  /tr/BUSIYIZHIZHANG.html
+      - title:  优胜劣汰
+        url:  /tr/YOUSHENGLIETAI.html
+      - title:  入梦
+        url:  /tr/RUMENG.html
+      - title:  冥府之路
+        url:  /tr/MINGFUZHILU.html
+      - title:  别眨眼
+        url:  /tr/BIEZHAYAN.html
+      - title:  双持！
+        url:  /tr/SHUANGCHI.html
+      - title:  另一条时间线
+        url:  /tr/LINGYITIAOSHIJIANXIAN.html
+      - title:  咒术洪流
+        url:  /tr/ZHOUSHUHONGLIU.html
+      - title:  地震术
+        url:  /tr/DIZHENSHU.html
+      - title:  复苏
+        url:  /tr/FUSU.html
+      - title:  大地之杖
+        url:  /tr/DADIZHIZHANG.html
+      - title:  大法师的唤醒
+        url:  /tr/DAFASHIDEHUANXING.html
+      - title:  大法师的怀表
+        url:  /tr/DAFASHIDEHUAIBIAO.html
+      - title:  小石子
+        url:  /tr/XIAOSHIZI.html
+      - title:  崭新的命运
+        url:  /tr/ZHANXINDEMINGYUN.html
+      - title:  巫师的计策
+        url:  /tr/WUSHIDEJICE.html
+      - title:  当头一棒
+        url:  /tr/DANGTOUYIBANG.html
+      - title:  彩虹水晶
+        url:  /tr/CAIHONGSHUIJING.html
+      - title:  无尽学识
+        url:  /tr/WUJINXUESHI.html
+      - title:  晶簇
+        url:  /tr/JINGCU.html
+      - title:  智慧之光
+        url:  /tr/ZHIHUIZHIGUANG.html
+      - title:  暗影法杖
+        url:  /tr/ANYINGFAZHANG.html
+      - title:  森罗的权杖
+        url:  /tr/SENLUODEQUANZHANG.html
+      - title:  毁灭打击
+        url:  /tr/HUIMIEDAJI.html
+      - title:  水晶
+        url:  /tr/SHUIJING.html
+      - title:  法力窃取
+        url:  /tr/FALIQIEQU.html
+      - title:  灌铅骰子
+        url:  /tr/GUANQIANTOUZI.html
+      - title:  灵界移动
+        url:  /tr/LINGJIEYIDONG.html
+      - title:  独行者的箭矢
+        url:  /tr/DUXINGZHEDEJIANSHI.html
+      - title:  绚丽的术式
+        url:  /tr/XUANLIDESHUSHI.html
+      - title:  缪斯的眷顾
+        url:  /tr/MIUSIDEJUANGU.html
+      - title:  群星之怒
+        url:  /tr/QUNXINGZHINU.html
+      - title:  自然的恩赐
+        url:  /tr/ZIRANDEENCI.html
+      - title:  苍奏符文
+        url:  /tr/CANGZHOUFUWEN.html
+      - title:  被诅咒的魔盒
+        url:  /tr/BEIZUZHOUDEMOHE.html
+      - title:  障眼法
+        url:  /tr/ZHANGYANFA.html
+      - title:  雷击
+        url:  /tr/LEIJI.html
+      - title:  魔力花
+        url:  /tr/MOLIHUA.html
+      - title:  魔晶
+        url:  /tr/MOJING.html
   - title: 秘术
     children:
-      - title: 传承之火
-        url: /tr/CHUANCHENGZHIHUO
-      - title: 龙之吐息
-        url: /tr/LONGZHITUXI
-      - title: 燃烧权杖
-        url: /tr/RANSHAOQUANZHANG
+      - title:  不稳定的传送门
+        url:  /tr/BUWENDINGDECHUANSONGMEN.html
+      - title:  天照符文
+        url:  /tr/TIANZHAOFUWEN.html
+      - title:  完美谢幕
+        url:  /tr/WANMEIXIEMU.html
+      - title:  小伎俩
+        url:  /tr/XIAOJILIA.html
+      - title:  幸运转盘
+        url:  /tr/XINGYUNZHUANPAN.html
+      - title:  归我了
+        url:  /tr/GUIWOLE.html
+      - title:  无尽奥术
+        url:  /tr/WUJINAOSHU.html
+      - title:  时空乱流
+        url:  /tr/SHIKONGLUANLIU.html
+      - title:  时间线变动
+        url:  /tr/SHIJIANXIANBIANDONG.html
+      - title:  月渎符文
+        url:  /tr/YUEDUFUWEN.html
+      - title:  次元超越
+        url:  /tr/CIYUANCHAOYUE.html
+      - title:  死灵冲击
+        url:  /tr/SILINGCHONGJI.html
+      - title:  法力之泉
+        url:  /tr/FALIZHIQUAN.html
+      - title:  法力失调
+        url:  /tr/FALISHITIAO.html
+      - title:  法术反制装置
+        url:  /tr/FASHUFANZHIZHUANGZHI.html
+      - title:  法术屏障启动
+        url:  /tr/FASHUPINGZHANGQIDONG.html
+      - title:  满足你的愿望
+        url:  /tr/MANZUNIDEYUANWANG.html
+      - title:  灵媒术
+        url:  /tr/LINGMEISHU.html
+      - title:  疾跑
+        url:  /tr/JIPAO.html
+      - title:  神灯
+        url:  /tr/SHENDENG.html
+      - title:  禁忌仪式
+        url:  /tr/JINJIYISHI.html
+      - title:  解咒
+        url:  /tr/JIEZHOU.html
+      - title:  远古狂暴
+        url:  /tr/YUANGUKUANGBAO.html
+      - title:  遗忘
+        url:  /tr/YIWANG.html
+      - title:  镜中虚影
+        url:  /tr/JINGZHONGXUYING.html
+      - title:  魔法师日志
+        url:  /tr/MOFASHIRIZHI.html
+
 
 
 cards-ad:
