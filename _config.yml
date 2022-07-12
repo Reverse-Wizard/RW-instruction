@@ -200,7 +200,7 @@ exclude:
   - /screenshots
   - /vendor
 
-collections_dir: /
+#collections_dir: /
 collections:
   otherposts:
     output: true
