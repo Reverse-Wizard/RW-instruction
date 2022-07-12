@@ -204,7 +204,7 @@ collections_dir: /
 collections:
   otherposts:
     output: true
-  instructions:
+  cardsets:
     output: true
 defaults:
   ## home
@@ -236,7 +236,7 @@ defaults:
       nav_key: documents
   - scope:
       path: ""
-      type: instructions
+      type: cardsets
     values:
       nav_key: documents
 

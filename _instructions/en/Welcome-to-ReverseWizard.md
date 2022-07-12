@@ -1,7 +1,7 @@
 ---
 title: Welcome to Reverse Wizaard
 key: ins-welcome-en
-permalink: /documents/instructions/en/ins-welcome
+permalink: /documents/cardsets/en/ins-welcome
 cover: /assets/images/nswsbig.jpg
 ---
 
