@@ -5,7 +5,7 @@ permalink: /documents/tr-fire.html
 key: documents-tr-fire
 cover: /cardAssetssmall/treasures/front/33/图片2.png
 articles:
-  data_source: site.posts
+  data_source: site.tags.火焰
 ---
 
 <div class="article__content" markdown="1">
