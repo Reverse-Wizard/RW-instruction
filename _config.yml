@@ -200,7 +200,7 @@ exclude:
   - /screenshots
   - /vendor
 
-# collections_dir: otherposts
+collections_dir: /
 collections:
   otherposts:
     output: true
@@ -234,7 +234,6 @@ defaults:
       type: otherposts
     values:
       nav_key: documents
-
   - scope:
       path: ""
       type: instructions
