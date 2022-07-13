@@ -2,7 +2,7 @@
 title: Welcome to Reverse Wizaard
 key: ins-welcome-en
 permalink: /documents/cardsets/en/ins-welcome
-cover: /assets/images/nswsbig.jpg
+cover: /assets/images/nswsbig.webp
 ---
 
 由深圳中学桌游社开发的桌游《逆时巫师》在经过一年的煅烧终于出炉啦。欢迎桌游爱好者加入抢先体验！

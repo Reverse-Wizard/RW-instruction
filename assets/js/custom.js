@@ -41,13 +41,13 @@
             $(function () {
                 $.vegas('slideshow', {
                     backgrounds: [
-                      { src: '/assets/img/1.jpg', fade: 1000, delay: 9000 },
-                      { src: '/assets/img/2.jpg', fade: 1000, delay: 9000 },
-                      { src: '/assets/img/3.jpg', fade: 1000, delay: 9000 },
-                      { src: '/assets/img/4.jpg', fade: 1000, delay: 9000 },
-                      { src: '/assets/img/5.jpg', fade: 1000, delay: 9000 },
-                      { src: '/assets/img/6.jpg', fade: 1000, delay: 9000 },
-                      { src: '/assets/img/7.jpg', fade: 1000, delay: 9000 },
+                      { src: '/assets/img/1.webp', fade: 1000, delay: 9000 },
+                      { src: '/assets/img/2.webp', fade: 1000, delay: 9000 },
+                      { src: '/assets/img/3.webp', fade: 1000, delay: 9000 },
+                      { src: '/assets/img/4.webp', fade: 1000, delay: 9000 },
+                      { src: '/assets/img/5.webp', fade: 1000, delay: 9000 },
+                      { src: '/assets/img/6.webp', fade: 1000, delay: 9000 },
+                      { src: '/assets/img/7.webp', fade: 1000, delay: 9000 },
                     ]
                 })('overlay', {
                     /** SLIDESHOW OVERLAY IMAGE **/
