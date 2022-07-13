@@ -378,44 +378,146 @@ cards-tr:
 
 
 
-cards-ad:
-  - title: 火焰
+cards-ex:
+  - title: III级探索
     children:
-      - title: 传承之火
-        url: /tr/CHUANCHENGZHIHUO
-      - title: 龙之吐息
-        url: /tr/LONGZHITUXI
-      - title: 燃烧权杖
-        url: /tr/RANSHAOQUANZHANG
-  - title: 冰霜
+      - title:  仗义的伙伴
+        url:  /ex/ZHANGYIDEHUOBAN.html
+      - title:  分配战利品(III)
+        url:  /ex/FENPEIZHANLIPINIII.html
+      - title:  厄运小精灵
+        url:  /ex/EYUNXIAOJINGLING.html
+      - title:  友谊第一
+        url:  /ex/YOUYIDIYI.html
+      - title:  发现宝藏
+        url:  /ex/FAXIANBAOZANG.html
+      - title:  奥术傀儡
+        url:  /ex/AOSHUKUILEI.html
+      - title:  宝箱怪
+        url:  /ex/BAOXIANGGUAI.html
+      - title:  小小博彩
+        url:  /ex/XIAOXIAOBOCAI.html
+      - title:  小蜘蛛群
+        url:  /ex/XIAOZHIZHUQUN.html
+      - title:  幸运小精灵
+        url:  /ex/XINGYUNXIAOJINGLING.html
+      - title:  幽灵
+        url:  /ex/YOULING.html
+      - title:  怨魂
+        url:  /ex/YUANHUN.html
+      - title:  悬赏令
+        url:  /ex/XUANSHANGLING.html
+      - title:  持盾小矮人
+        url:  /ex/CHIDUNXIAOAIREN.html
+      - title:  极速前进
+        url:  /ex/JISUQIANJIN.html
+      - title:  橡木树妖
+        url:  /ex/XIANGMUSHUYAO.html
+      - title:  法力魔蛙
+        url:  /ex/FALIMOWA.html
+      - title:  活动假人
+        url:  /ex/HUODONGJIAREN.html
+      - title:  流金
+        url:  /ex/LIUJIN.html
+      - title:  清凉的泉水
+        url:  /ex/QINGLIANGDEQUANSHUI.html
+      - title:  火蛇
+        url:  /ex/HUOSHE.html
+      - title:  灵狐
+        url:  /ex/LINGHU.html
+      - title:  烈焰精灵
+        url:  /ex/LIEYANJINGLING.html
+      - title:  瘟疫鼠
+        url:  /ex/WENYISHU.html
+      - title:  窃贼
+        url:  /ex/QIEZEI.html
+      - title:  贪婪的地精
+        url:  /ex/TANLANDEDEJING.html
+      - title:  贼不走空
+        url:  /ex/ZEIBUZOUKONG.html
+      - title:  赏金猎人
+        url:  /ex/SHANGJINLIEREN.html
+      - title:  酸液怪
+        url:  /ex/SUANYEGUAI.html
+      - title:  金矿！
+        url:  /ex/JINKUANG.html
+      - title:  镀金的部件
+        url:  /ex/DUJINDEBUJIAN.html
+      - title:  魔瘾者
+        url:  /ex/MOYINZHE.html
+  - title: VI级探索
     children:
-      - title: 传承之火
-        url: /tr/CHUANCHENGZHIHUO
-      - title: 龙之吐息
-        url: /tr/LONGZHITUXI
-      - title: 燃烧权杖
-        url: /tr/RANSHAOQUANZHANG
-  - title: 奥能
+      - title:  分配战利品(VI)
+        url:  /ex/FENPEIZHANLIPINVI.html
+      - title:  吸血蝙蝠
+        url:  /ex/XIXUEBIANFU.html
+      - title:  奥术巨人
+        url:  /ex/AOSHUJUREN.html
+      - title:  小红与小蓝
+        url:  /ex/XIAOHONGYUXIAOLAN.html
+      - title:  法力洪流
+        url:  /ex/FALIHONGLIU.html
+      - title:  火热促销
+        url:  /ex/HUORECUXIAO.html
+      - title:  灵魂祭司
+        url:  /ex/LINGHUNJISI.html
+      - title:  玻璃卫士
+        url:  /ex/BOLIWEISHI.html
+      - title:  硬壳乌龟
+        url:  /ex/YINGKEWUGUI.html
+      - title:  粘液球
+        url:  /ex/NIANYEQIU.html
+      - title:  被禁锢的凤凰
+        url:  /ex/BEIJINGUDEFENGHUANG.html
+      - title:  诡异的头骨
+        url:  /ex/GUIYIDETOUGU.html
+      - title:  通缉令
+        url:  /ex/TONGJILING.html
+      - title:  酸液喷射者
+        url:  /ex/SUANYEPENSHEZHE.html
+      - title:  锯齿宝箱怪
+        url:  /ex/JUCHIBAOXIANGGUAI.html
+      - title:  食人花
+        url:  /ex/SHIRENHUA.html
+      - title:  黑暗中的阴影
+        url:  /ex/HEIANZHONGDEYINYING.html
+  - title: IX级探索
     children:
-      - title: 传承之火
-        url: /tr/CHUANCHENGZHIHUO
-      - title: 龙之吐息
-        url: /tr/LONGZHITUXI
-      - title: 燃烧权杖
-        url: /tr/RANSHAOQUANZHANG
-  - title: 无派系
+      - title:  九命妖狐
+        url:  /ex/JIUMINGYAOHU.html
+      - title:  亡灵船长
+        url:  /ex/WANGLINGCHUANZHANG.html
+      - title:  分配战利品(IX)
+        url:  /ex/FENPEIZHANLIPINIX.html
+      - title:  巨龙的宝藏
+        url:  /ex/JULONGDEBAOZANG.html
+      - title:  恶魔花
+        url:  /ex/EMOHUA.html
+      - title:  独眼巨人
+        url:  /ex/DUYANJUREN.html
+      - title:  神秘店铺
+        url:  /ex/SHENMIDIANPU.html
+      - title:  自大的骑士
+        url:  /ex/ZIDADEQISHI.html
+      - title:  趁火打劫
+        url:  /ex/CHENHUODAJIE.html
+      - title:  魅魔
+        url:  /ex/MEIMO.html
+      - title:  黑女巫
+        url:  /ex/HEINVWU.html
+      - title:  黑魔法学徒
+        url:  /ex/HEIMOFAXUETU.html
+  - title: XII级探索
     children:
-      - title: 传承之火
-        url: /tr/CHUANCHENGZHIHUO
-      - title: 龙之吐息
-        url: /tr/LONGZHITUXI
-      - title: 燃烧权杖
-        url: /tr/RANSHAOQUANZHANG
-  - title: 秘术
-    children:
-      - title: 传承之火
-        url: /tr/CHUANCHENGZHIHUO
-      - title: 龙之吐息
-        url: /tr/LONGZHITUXI
-      - title: 燃烧权杖
-        url: /tr/RANSHAOQUANZHANG
+      - title:  噬法巨龙
+        url:  /ex/SHIFAJULONG.html
+      - title:  守序巨龙
+        url:  /ex/SHOUXUJULONG.html
+      - title:  时间沙漏
+        url:  /ex/SHIJIANSHALOU.html
+      - title:  混沌巨龙
+        url:  /ex/HUNDUNJULONG.html
+      - title:  磐岩巨龙
+        url:  /ex/PANYANJULONG.html
+      - title:  诅咒巨龙
+        url:  /ex/ZUZHOUJULONG.html
