@@ -3,8 +3,7 @@ layout: articles
 title: 宝藏-奥能
 permalink: /documents/tr-arcane.html
 key: documents-tr-arcane
-cover: /assets/images/CardAssetssmall/treasures/front/33/图片12.png
-articles:
+cover: /assets/images/sets/arc.png
   data_source: site.tags.奥能
   type: grid
   size: sm
