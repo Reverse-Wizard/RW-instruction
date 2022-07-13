@@ -105,19 +105,19 @@ header:
 
   - titles:
       # @start locale config
-      en      : &EN       Docs
+      en      : &EN       Overview
       en-GB   : *EN
       en-US   : *EN
       en-CA   : *EN
       en-AU   : *EN
-      zh-Hans : &ZH_HANS  文献
+      zh-Hans : &ZH_HANS  总览
       zh      : *ZH_HANS
       zh-CN   : *ZH_HANS
       zh-SG   : *ZH_HANS
-      zh-Hant : &ZH_HANT  文獻
+      zh-Hant : &ZH_HANT  總覽
       zh-TW   : *ZH_HANT
       zh-HK   : *ZH_HANT
-      ko      : &KO       문헌
+      ko      : &KO       총람
       ko-KR   : *KO
       fr      : *FR
       fr-BE   : *FR
