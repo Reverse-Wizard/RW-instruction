@@ -3,8 +3,8 @@ default:
   highlight_theme: default
   lang: zh
   paths:
-    root: /
-    home: /home
+    root: /home
+    home: /
     archive:  /archive.html
     rss:  /feed.xml
   mathjax: false
