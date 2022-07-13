@@ -5,6 +5,10 @@ permalink: /documents.html
 ---
 <div class="layout--articles">
   <section class="my-5">
+    <header><h2 id="instructions">说明书</h2></header>
+    {%- include article-list.html articles=site.instructions type='grid' -%}
+  </section>
+  <section class="my-5">
     <header><h2 id="otherposts">其他文章</h2></header>
     {%- include article-list.html articles=site.otherposts type='grid' -%}
   </section>
