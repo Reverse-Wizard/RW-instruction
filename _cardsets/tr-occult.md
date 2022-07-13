@@ -1,8 +1,8 @@
 ---
-title: 宝藏-秘术
 layout: articles
-key: documents-cardsets-tr-occult
-permalink: /documents/cardsets/tr-occult.html
+title: 宝藏-秘术
+permalink: /documents/tr-occult.html
+key: documents-tr-occult
 cover: /assets/images/sets/occ.webp
 articles:
   data_source: site.tags.秘术

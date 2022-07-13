@@ -1,8 +1,7 @@
 ---
-title: 欢迎来到逆时巫师
-layout: article
-key: documents-instructions-welcome
-permalink: /documents/instructions/welcome.html
+title: Welcome to Reverse Wizaard
+key: ins-welcome-en
+permalink: /documents/cardsets/en/ins-welcome
 cover: /assets/images/nswsbig.webp
 ---
 

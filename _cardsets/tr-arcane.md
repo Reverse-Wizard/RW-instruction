@@ -1,8 +1,8 @@
 ---
 layout: articles
 title: 宝藏-奥能
-permalink: /documents/cardsets/tr-arcane.html
-key: documents-cardsets-tr-arcane
+permalink: /documents/tr-arcane.html
+key: documents-tr-arcane
 cover: /assets/images/sets/arc.webp
 articles:
   data_source: site.tags.奥能

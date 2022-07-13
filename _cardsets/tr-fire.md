@@ -1,8 +1,8 @@
 ---
 layout: articles
 title: 宝藏-火焰
-permalink: /documents/cardsets/tr-fire.html
-key: documents-cardsets-tr-fire
+permalink: /documents/tr-fire.html
+key: documents-tr-fire
 cover: /assets/images/sets/fir.webp
 articles:
   data_source: site.tags.火焰
