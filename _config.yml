@@ -206,6 +206,8 @@ collections:
     output: true
   cardsets:
     output: true
+  instructions：
+    output： true
 defaults:
   ## home
   - scope:
@@ -237,6 +239,11 @@ defaults:
   - scope:
       path: ""
       type: cardsets
+    values:
+      nav_key: documents
+  - scope:
+      path: ""
+      type: instructions
     values:
       nav_key: documents
 
