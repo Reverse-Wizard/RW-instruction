@@ -1560,6 +1560,26 @@ table th[class*="col-"] {
 .table-hover > tbody > tr.warning:hover > th {
   background-color: #faf2cc;
 }
+.table > thead > tr > td.darkness,
+.table > tbody > tr > td.darkness,
+.table > tfoot > tr > td.darkness,
+.table > thead > tr > th.darkness,
+.table > tbody > tr > th.darkness,
+.table > tfoot > tr > th.darkness,
+.table > thead > tr.darkness > td,
+.table > tbody > tr.darkness > td,
+.table > tfoot > tr.darkness > td,
+.table > thead > tr.darkness > th,
+.table > tbody > tr.darkness > th,
+.table > tfoot > tr.darkness > th {
+  background-color: #fcf8e3;
+}
+.table-hover > tbody > tr > td.darkness:hover,
+.table-hover > tbody > tr > th.darkness:hover,
+.table-hover > tbody > tr.darkness:hover > td,
+.table-hover > tbody > tr.darkness:hover > th {
+  background-color: #faf2cc;
+}
 .table > thead > tr > td.danger,
 .table > tbody > tr > td.danger,
 .table > tfoot > tr > td.danger,
