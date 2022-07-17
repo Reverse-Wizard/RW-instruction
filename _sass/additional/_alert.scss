@@ -26,4 +26,12 @@
     border: 1px solid $red;
     border-radius: map-get($base, border-radius);
   }
+
+  p.darkness {
+    padding: map-get($spacers, 2) map-get($spacers, 3);
+    background-color: rgba($black, .1);
+    border: 1px solid $black;
+    border-radius: map-get($base, border-radius);
+  }
+
 }
