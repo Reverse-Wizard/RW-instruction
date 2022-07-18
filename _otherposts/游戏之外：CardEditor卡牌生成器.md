@@ -3,18 +3,18 @@ title: 游戏之外：CardEditor卡牌生成器
 layout: article
 author: 米花
 key: oth-outofgame-ce
-cover: /assets/images/nswsbig.webp
+cover: /assets/images/sets/ezc.webp
 public: true
 header:
   theme: dark
-  background: 'linear-gradient(135deg, rgb(34, 139, 87), rgb(139, 34, 139))'
+  background: 'linear-gradient(135deg, rgb(241, 96, 255), rgb(255, 242, 0))'
 article_header:
   type: overlay
   theme: dark
   background_color: '#203028'
   background_image:
-    gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
-    src: /assets/images/nswsbig.webp
+    gradient: 'linear-gradient(135deg, rgba(241, 96, 255 , .4), rgba(255, 242, 0, .4))'
+    src: /assets/images/sets/ezc.webp
 ---
 
 嗯？卡牌是怎么来的？一张一张ps吗？
