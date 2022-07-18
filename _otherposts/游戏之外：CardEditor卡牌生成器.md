@@ -60,11 +60,11 @@ article_header:
 
 # 宣发&教程视频
 
-<div>{%- include extensions/bilibili.html id='BV1j44y1L7Kw' -%}</div>
+<div>{%- include extensions/bilibili.html id='978239021' -%}</div>
 
-<div>{%- include extensions/bilibili.html id='BV1HS4y157ov' -%}</div>
+<div>{%- include extensions/bilibili.html id='681273799' -%}</div>
 
-<div>{%- include extensions/bilibili.html id='BV1JU4y1S7cs' -%}</div>
+<div>{%- include extensions/bilibili.html id='683918869' -%}</div>
 
 
 # CardEditor远古版
