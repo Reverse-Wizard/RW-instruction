@@ -112,11 +112,11 @@
         <div class="cell cell--12 cell--md-4 cell--lg-3">
           <div class="card card--flat">
             {%- if _article.cover -%}
+            <a href="{{ _article_url }}">
               <div class="card__image">
-                <a href="{{ _article_url }}">
                 <img class="image" src="{{ _article_cover }}" />
-                </a>
-                <div class="overlay overlay--bottom">
+              <div class="overlay overlay--bottom">
+            </a>
                   <header>
                     <a href="{{ _article_url }}"><h2 class="card__header">{{ _article.title }}</h2></a>
                   </header>
@@ -130,11 +130,11 @@
         <div class="cell cell--12 cell--md-6 cell--lg-4">
           <div class="card card--flat">
             {%- if _article.cover -%}
+            <a href="{{ _article_url }}">
               <div class="card__image">
-                <a href="{{ _article_url }}">
                   <img src="{{ _article_cover }}" />
-                </a>
               </div>
+            </a>
             {%- endif -%}
               <div class="card__content">
                 <header>
