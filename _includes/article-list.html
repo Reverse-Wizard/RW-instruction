@@ -46,17 +46,11 @@
           {%- assign _article_cover = __return -%}
           <div class="item__image">
           {%- if include.cover_size == 'lg' -%}
-          <a href="{{ _article_url }}">
             <img class="image image--lg" src="{{ _article_cover }}" />
-          </a>
           {%- elsif include.cover_size == 'sm' -%}
-          <a href="{{ _article_url }}">
             <img class="image image--sm" src="{{ _article_cover }}" />
-          </a>
           {%- else -%}
-          <a href="{{ _article_url }}">
             <img class="image" src="{{ _article_cover }}" />
-          </a>
           {%- endif -%}
           </div>
         {%- endif -%}
@@ -119,7 +113,9 @@
           <div class="card card--flat">
             {%- if _article.cover -%}
               <div class="card__image">
+                <a href="{{ _article_url }}">
                 <img class="image" src="{{ _article_cover }}" />
+                </a>
                 <div class="overlay overlay--bottom">
                   <header>
                     <a href="{{ _article_url }}"><h2 class="card__header">{{ _article.title }}</h2></a>
@@ -134,7 +130,11 @@
         <div class="cell cell--12 cell--md-6 cell--lg-4">
           <div class="card card--flat">
             {%- if _article.cover -%}
-              <div class="card__image"><img src="{{ _article_cover }}" /></div>
+              <div class="card__image">
+                <a href="{{ _article_url }}">
+                  <img src="{{ _article_cover }}" />
+                </a>
+              </div>
             {%- endif -%}
               <div class="card__content">
                 <header>
