@@ -21,8 +21,8 @@
 <script>
   window.Lazyload.js(['{{ _sources.leancloud_js_sdk}}', '{{ _sources.valine }}'], function() {
     // 1.Define langName and langMode 
-    var langName = 'cu',
-      langMode = {	
+    var langName = 'CU',
+      LM = {	
         "nick": "昵称",
         "mail": "电子邮箱",
         "link": "网站(http://)(点击你的昵称会跳转的地方)",
@@ -62,8 +62,8 @@
       appId:  '{{ _VALINE_APP_ID }}',
       appKey: '{{ _VALINE_APP_KEY }}',
       verify: false,
-      lang: langName,
-      langMode: langMode,
+      lang: 'CU',
+      langMode: LM,
       avatar:'retro',
       recordIP: true,
       enableQQ: true,
