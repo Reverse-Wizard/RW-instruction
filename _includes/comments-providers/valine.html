@@ -20,11 +20,50 @@
 
 <script>
   window.Lazyload.js(['{{ _sources.leancloud_js_sdk}}', '{{ _sources.valine }}'], function() {
+    // 1.Define langName and langMode 
+    var langName = 'cu',
+      langMode = {	
+        "nick": "昵称",
+        "mail": "电子邮箱",
+        "link": "网站(http://)(点击你的昵称会跳转的地方)",
+        "nickFail":"昵称不能短于3字节",
+        "mailFail":"请确认你的电子邮箱",
+        "sofa": "还没有评论，快来抢沙发！",
+        "submit": "发表",
+        "reply": "回复",
+        "cancelReply": "取消回复",
+        "comments": "评论",
+        "cancel": "取消",
+        "confirm": "确定",
+        "continue": "继续",
+        "more": "加载更多...",
+        "preview": "预览",
+        "emoji": "表情",
+        "expand": "康康更多....",
+        "seconds": "秒钟前",
+        "minutes": "分钟前",
+        "hours": "小时前",
+        "days": "天前",
+        "now": "即刻",
+        "uploading":"上传中 ...",
+        "uploadDone":"上传完毕",
+        "busy":"发表繁忙，一会儿再试试？",
+        "code-98":"Valine评论系统初始化失败，请检查你的 av-min.js 的版本",
+        "code-99": "Valine评论系统初始化失败，请检查初始化 method 的 `el` 元素",
+        "code-100": "Valine评论系统初始化失败，请检查 appId 和 appKey",
+        "code-140":"今天网站评论请求总次数太多了，明天再说吧...",
+        "code-401": "未授权的操作，请检查 appId 和 appKey",
+        "code-403": "发布评论被API的网站许可白名单拒绝了，请检查白名单"
+    };
+    
     var _config = {
       el: '#vcomments',
       appId:  '{{ _VALINE_APP_ID }}',
       appKey: '{{ _VALINE_APP_KEY }}',
       verify: true,
+      lang: langName,
+      langMode: langMode,
+      avatar:'/'
     };
     {%- if _VALINE_PLACEHOLDER -%}
       _config.placeholder = '{{ _VALINE_PLACEHOLDER }}';
