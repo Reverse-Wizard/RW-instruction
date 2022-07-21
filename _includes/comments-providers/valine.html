@@ -21,7 +21,7 @@
 <script>
   window.Lazyload.js(['{{ _sources.leancloud_js_sdk}}', '{{ _sources.valine }}'], function() {
     // 1.Define langName and langMode 
-    var langName = 'CU',
+    /*var langName = 'CU',
       LM = {	
         "nick": "昵称",
         "mail": "电子邮箱",
@@ -54,7 +54,7 @@
         "code-140":"今天网站评论请求总次数太多了，明天再说吧...",
         "code-401": "未授权的操作，请检查 appId 和 appKey",
         "code-403": "发布评论被API的网站许可白名单拒绝了，请检查白名单"
-    };
+    };*/
     
     var _config = 
     {
@@ -62,8 +62,8 @@
       appId:  '{{ _VALINE_APP_ID }}',
       appKey: '{{ _VALINE_APP_KEY }}',
       verify: false,
-      lang: 'CU',
-      langMode: LM,
+      lang: 'zh-CN',
+      //langMode: LM,
       avatar:'retro',
       recordIP: true,
       enableQQ: true,
