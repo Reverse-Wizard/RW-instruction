@@ -110,7 +110,7 @@
     {%- elsif include.type == 'grid' -%}
       {%- if include.size == 'sm' -%}
         <div class="cell cell--12 cell--md-4 cell--lg-3">
-          <div class="card card--flat">
+          <div onclick="window.open('{{ _article_url }}')" class="card card--flat">
             {%- if _article.cover -%}
               <div class="card__image">
                 <img class="image" src="{{ _article_cover }}" />
