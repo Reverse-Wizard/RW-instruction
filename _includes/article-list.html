@@ -126,13 +126,11 @@
       {%- else -%}
 
         <div class="cell cell--12 cell--md-6 cell--lg-4">
-          <div class="card card--flat">
+          <div onclick="window.open('{{ _article_url }}')" class="card card--flat">
             {%- if _article.cover -%}
-            <a href="{{ _article_url }}">
               <div class="card__image">
                   <img src="{{ _article_cover }}" />
               </div>
-            </a>
             {%- endif -%}
               <div class="card__content">
                 <header>
