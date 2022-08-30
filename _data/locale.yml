@@ -35,7 +35,7 @@ en-AU:
 zh-Hans: &ZH_HANS
   SUBSCRIBE               : "订阅"
   READMORE                : "阅读更多"
-  SEARCH                  : "搜索"
+  SEARCH                  : "搜索文章/卡牌"
   CANCEL                  : "取消"
   VIEWS                   : "阅读"
   LAST_UPDATED            : "更新于"
@@ -50,7 +50,7 @@ zh-Hans: &ZH_HANS
   FOLLOW_US               : "在 [NAME] 上关注我们。"
   EMAIL_ME                : "给我发邮件。"
   EMAIL_US                : "给我们发邮件。"
-  COPYRIGHT_DATES         : "2021"
+  COPYRIGHT_DATES         : "2022"
 
 zh:
   <<: *ZH_HANS
