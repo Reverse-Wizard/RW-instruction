@@ -4,7 +4,7 @@ default:
   lang: zh
   paths:
     root: /
-    home: /home
+    home: /home/
     archive:  /archive.html
     rss:  /feed.xml
     overview: /overview.html
