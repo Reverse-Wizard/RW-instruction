@@ -4,9 +4,10 @@ default:
   lang: zh
   paths:
     root: /
-    home: /overview.html
+    home: /home
     archive:  /archive.html
     rss:  /feed.xml
+    overview: /overview.html
   mathjax: false
   mathjax_autoNumber: false
   mermaid: false
