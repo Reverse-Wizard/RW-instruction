@@ -1,6 +1,32 @@
 header:
   - titles:
       # @start locale config
+      en      : &EN       Official-Website
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      zh-Hans : &ZH_HANS  官网
+      zh      : *ZH_HANS
+      zh-CN   : *ZH_HANS
+      zh-SG   : *ZH_HANS
+      zh-Hant : &ZH_HANT  官網
+      zh-TW   : *ZH_HANT
+      zh-HK   : *ZH_HANT
+      ko      : &KO       홈페이지
+      ko-KR   : *KO
+      fr      : *FR       
+      fr-BE   : *FR
+      fr-CA   : *FR
+      fr-CH   : *FR
+      fr-FR   : *FR
+      fr-LU   : *FR
+      tr      : *TR       
+      # @end locale config
+    url: /
+
+  - titles:
+      # @start locale config
       en      : &EN       Overview
       en-GB   : *EN
       en-US   : *EN
@@ -103,35 +129,15 @@ header:
       # @end locale config
     url: /about.html
 
-  - titles:
-      # @start locale config
-      en      : &EN       Official-Website
-      en-GB   : *EN
-      en-US   : *EN
-      en-CA   : *EN
-      en-AU   : *EN
-      zh-Hans : &ZH_HANS  官网
-      zh      : *ZH_HANS
-      zh-CN   : *ZH_HANS
-      zh-SG   : *ZH_HANS
-      zh-Hant : &ZH_HANT  官網
-      zh-TW   : *ZH_HANT
-      zh-HK   : *ZH_HANT
-      ko      : &KO       홈페이지
-      ko-KR   : *KO
-      fr      : *FR       
-      fr-BE   : *FR
-      fr-CA   : *FR
-      fr-CH   : *FR
-      fr-FR   : *FR
-      fr-LU   : *FR
-      tr      : *TR       
-      # @end locale config
-    url: /
+
 
 
 
 cards-tr:
+  - title: 内测版专属
+    children:
+      - title:  猩红绽放
+        url:  /tr/XINGHONGZHANFANG.html
   - title: 奥能
     children:
       - title:  双发魔弹
@@ -374,6 +380,8 @@ cards-tr:
         url:  /tr/JINGZHONGXUYING.html
       - title:  魔法师日志
         url:  /tr/MOFASHIRIZHI.html
+      - title:  猩红绽放
+        url:  /tr/XINGHONGZHANFANG.html
 
 
 
