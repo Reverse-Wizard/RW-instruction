@@ -112,12 +112,16 @@
         <div class="cell cell--12 cell--md-4 cell--lg-3">
           <div class="card card--flat">
             {%- if _article.cover -%}
-              <div onclick="window.open('{{ _article_url }}')" class="card__image">
-                <img class="image" src="{{ _article_cover }}" />
-              <div class="overlay overlay--bottom">
-                  <header>
-                    <a href="{{ _article_url }}"><h2 class="card__header">{{ _article.title }}</h2></a>
-                  </header>
+              <div class="card__image">
+                <img onclick="window.location.href='{{ _article_url }}'" class="image" src="{{ _article_cover }}" />
+                <!--
+                  <img onclick="window.open('{{ _article_url }}')" class="image" src="{{ _article_cover }}" />
+                onclick="window.location.href='testceshi.html'"
+              -->
+                  <div class="overlay overlay--bottom">
+                    <header>
+                      <a href="{{ _article_url }}"><h2 class="card__header">{{ _article.title }}</h2></a>
+                    </header>
                 </div>
               </div>
             {%- endif -%}
@@ -129,7 +133,7 @@
           <div class="card card--flat">
             {%- if _article.cover -%}
               <div class="card__image">
-                  <img src="{{ _article_cover }}" />
+                  <img onclick="window.location.href='{{ _article_url }}'" src="{{ _article_cover }}" />
               </div>
             {%- endif -%}
               <div class="card__content">
