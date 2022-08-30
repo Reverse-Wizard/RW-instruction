@@ -1,5 +1,46 @@
 ---
-layout: home
-title: 卡牌概览
-permalink: /overview.html
+layout: articles
+titles:
+  # @start locale config
+  en      : &EN       Card-Overview
+  en-GB   : *EN
+  en-US   : *EN
+  en-CA   : *EN
+  en-AU   : *EN
+  zh-Hans : &ZH_HANS  卡牌概览
+  zh      : *ZH_HANS
+  zh-CN   : *ZH_HANS
+  zh-SG   : *ZH_HANS
+  zh-Hant : &ZH_HANT  卡牌概覽
+  zh-TW   : *ZH_HANT
+  zh-HK   : *ZH_HANT
+  ko      : &KO       카드-개요
+  ko-KR   : *KO
+  fr      : *FR       
+  fr-BE   : *FR
+  fr-CA   : *FR
+  fr-CH   : *FR
+  fr-FR   : *FR
+  fr-LU   : *FR
+  tr      : *TR       
+  # @end locale config
+show_title: false
+articles:
+  data_source: paginator.posts
+  article_type: BlogPosting
+  show_cover: true
+  show_excerpt: true
+  show_readmore: true
+  show_info: true
+  permalink: /overview.html
 ---
+
+
+<div class="layout--home">
+  {%- include paginator.html -%}
+</div>
+<script>
+  {%- include scripts/home.js -%}
+</script>
+
+{{ content }}
