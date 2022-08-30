@@ -110,10 +110,10 @@
     {%- elsif include.type == 'grid' -%}
       {%- if include.size == 'sm' -%}
         <div class="cell cell--12 cell--md-4 cell--lg-3">
-          <div onclick="window.open('{{ _article_url }}')" class="card card--flat">
+          <div class="card card--flat">
             {%- if _article.cover -%}
               <div class="card__image">
-                <img class="image" src="{{ _article_cover }}" />
+                <a href="{{ _article_url }}"><img class="image" src="{{ _article_cover }}" /></a>
               <div class="overlay overlay--bottom">
                   <header>
                     <a href="{{ _article_url }}"><h2 class="card__header">{{ _article.title }}</h2></a>
@@ -126,10 +126,10 @@
       {%- else -%}
 
         <div class="cell cell--12 cell--md-6 cell--lg-4">
-          <div onclick="window.open('{{ _article_url }}')" class="card card--flat">
+          <div class="card card--flat">
             {%- if _article.cover -%}
               <div class="card__image">
-                  <img src="{{ _article_cover }}" />
+                <a href="{{ _article_url }}"><img src="{{ _article_cover }}" /></a>
               </div>
             {%- endif -%}
               <div class="card__content">
