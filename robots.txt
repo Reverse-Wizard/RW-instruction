@@ -1,9 +1,0 @@
-User-agent: *
-
-Disallow: /assets/
-
-Allow: /ex/
-Allow: /tr/
-Allow: /documents/
-Allow: /instructions/
-Allow: /otherposts/
