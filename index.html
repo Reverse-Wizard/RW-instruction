@@ -147,6 +147,12 @@
     <img src="/assets/images/others/szsc30hx.webp" alt="深圳中学">
     <img src="/assets/images/others/wng30hx.webp" alt="无内鬼工作室">
     &copy; 2022 逆时巫师 All rights reserved.
+      {%- include snippets/get-locale-string.html key='COPYRIGHT_DATES' -%}
+      {%- assign _locale_copyright_dates = __return -%}
+      © {{ site.title }} {{ _locale_copyright_dates }},
+      Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
+      title="TeXt is a super customizable Jekyll theme." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>,
+      Website-Maintenance by <a title="18, Student" href="https://github.com/POPCORNBOOM">POPCORNBOOM</a>.
   </div> 
   <!-- CORE JQUERY  --> 
   <script src="/assets/plugins/jquery-1.10.2.js"></script> 
