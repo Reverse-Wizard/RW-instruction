@@ -13,16 +13,16 @@
 
 <div id="vcomments"></div>
 
-{%- if _VALINE_VISITOR -%}    
+{%- if _VALINE_VISITOR -%}
 <span id="{{page.url}}" class="leancloud-visitors" data-flag-title={{page.title}}>
 </span>
 {%- endif -%}
 
 <script>
   window.Lazyload.js(['{{ _sources.leancloud_js_sdk}}', '{{ _sources.valine }}'], function() {
-    // 1.Define langName and langMode 
+    // 1.Define langName and langMode
     /*var langName = 'CU',
-      LM = {	
+      LM = {
         "nick": "昵称",
         "mail": "电子邮箱",
         "link": "网站(http://)(点击你的昵称会跳转的地方)",
@@ -55,8 +55,8 @@
         "code-401": "未授权的操作，请检查 appId 和 appKey",
         "code-403": "发布评论被API的网站许可白名单拒绝了，请检查白名单"
     };*/
-    
-    var _config = 
+
+    var _config =
     {
       el: '#vcomments',
       appId:  '{{ _VALINE_APP_ID }}',
@@ -67,7 +67,7 @@
       avatar:'retro',
       recordIP: false,
       enableQQ: true,
-      emojiCDN: '//i0.hdslb.com/bfs/emote/', 
+      emojiCDN: '//i0.hdslb.com/bfs/emote/',
     // 表情title和图片映射
       emojiMaps: {
         "tv_doge": "6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png",
@@ -129,7 +129,7 @@
     {%- assign _page_lang_slice =  page.lang | slice: 0, 2 -%}
     {%- if _page_lang_slice != 'zh'  -%}
       _config.lang = 'en';
-    {%- endif -%}  
+    {%- endif -%}
     {%- if _VALINE_VISITOR -%}
       _config.visitor = 'true';
     {%- endif -%}
