@@ -15,13 +15,13 @@ header:
       zh-HK   : *ZH_HANT
       ko      : &KO       홈페이지
       ko-KR   : *KO
-      fr      : *FR       
+      fr      : *FR
       fr-BE   : *FR
       fr-CA   : *FR
       fr-CH   : *FR
       fr-FR   : *FR
       fr-LU   : *FR
-      tr      : *TR       
+      tr      : *TR
       # @end locale config
     url: /
 
@@ -50,7 +50,7 @@ header:
       tr      : *TR
       # @end locale config
     url: /documents.html
-    
+
 #  - titles:
 #      # @start locale config
 #      en      : &EN       Card-Overview
@@ -93,13 +93,13 @@ header:
       zh-HK   : *ZH_HANT
       ko      : &KO       카드-조회
       ko-KR   : *KO
-      fr      : *FR       
+      fr      : *FR
       fr-BE   : *FR
       fr-CA   : *FR
       fr-CH   : *FR
       fr-FR   : *FR
       fr-LU   : *FR
-      tr      : *TR       
+      tr      : *TR
       # @end locale config
     url: /archive.html
 
@@ -125,9 +125,35 @@ header:
       fr-CH   : *FR
       fr-FR   : *FR
       fr-LU   : *FR
-      tr      : *TR       
+      tr      : *TR
       # @end locale config
     url: /about.html
+
+  - titles:
+      # @start locale config
+      en      : &EN_ONLINE    Online-Test
+      en-GB   : *EN_ONLINE
+      en-US   : *EN_ONLINE
+      en-CA   : *EN_ONLINE
+      en-AU   : *EN_ONLINE
+      zh-Hans : &ZH_ONLINE    在线测试
+      zh      : *ZH_ONLINE
+      zh-CN   : *ZH_ONLINE
+      zh-SG   : *ZH_ONLINE
+      zh-Hant : &ZH_ONLINE_H  線上測試
+      zh-TW   : *ZH_ONLINE_H
+      zh-HK   : *ZH_ONLINE_H
+      ko      : &KO_ONLINE    온라인 테스트
+      ko-KR   : *KO_ONLINE
+      fr      : *FR
+      fr-BE   : *FR
+      fr-CA   : *FR
+      fr-CH   : *FR
+      fr-FR   : *FR
+      fr-LU   : *FR
+      tr      : *TR
+      # @end locale config
+    url: https://game.reversewizard.site
 
 
 
