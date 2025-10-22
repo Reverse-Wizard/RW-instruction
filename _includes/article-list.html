@@ -46,11 +46,11 @@
           {%- assign _article_cover = __return -%}
           <div class="item__image">
           {%- if include.cover_size == 'lg' -%}
-            <img class="image image--lg" src="{{ _article_cover }}" />
+            <img class="image image--lg lazy" data-src="{{ _article_cover }}" />
           {%- elsif include.cover_size == 'sm' -%}
-            <img class="image image--sm" src="{{ _article_cover }}" />
+            <img class="image image--sm lazy" data-src="{{ _article_cover }}" />
           {%- else -%}
-            <img class="image" src="{{ _article_cover }}" />
+            <img class="image lazy" data-src="{{ _article_cover }}" />
           {%- endif -%}
           </div>
         {%- endif -%}
@@ -113,7 +113,7 @@
           <div class="card card--flat">
             {%- if _article.cover -%}
               <div class="card__image">
-                <img onclick="window.location.href='{{ _article_url }}'" class="image" src="{{ _article_cover }}" />
+                <img onclick="window.location.href='{{ _article_url }}'" class="image lazy" data-src="{{ _article_cover }}" />
                 <!--
                   <img onclick="window.open('{{ _article_url }}')" class="image" src="{{ _article_cover }}" />
                 onclick="window.location.href='testceshi.html'"
@@ -133,7 +133,7 @@
           <div class="card card--flat">
             {%- if _article.cover -%}
               <div onclick="window.location.href='{{ _article_url }}'" class="card__image">
-                  <img src="{{ _article_cover }}" />
+                  <img class="lazy" data-src="{{ _article_cover }}" />
               </div>
             {%- endif -%}
               <div class="card__content">
