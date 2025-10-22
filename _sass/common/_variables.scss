@@ -1,4 +1,4 @@
-@import 'sass:math';
+@use 'sass:math' as math;
 
 $base: (
   font-family:            (-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif),

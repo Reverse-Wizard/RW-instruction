@@ -1,4 +1,4 @@
-@import 'sass:math';
+@use 'sass:math' as math;
 
 $grid-columns: 12;
 
@@ -18,7 +18,7 @@ $grid-columns: 12;
     width: auto;
   } @else if $columns == "stretch" {
     @include flex(1);
-  @else {
+  } @else {
     @include flex(none);
     width: percentage(math.div($columns, $grid-columns));
   }
