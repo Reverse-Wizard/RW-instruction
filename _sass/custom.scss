@@ -100,6 +100,12 @@ body {
   border-top: 1px solid $border-color-l;
 }
 
+.footer__honor {
+  margin-top: map-get($spacers, 2);
+  color: $main-color-1;
+  font-weight: 600;
+}
+
 button:focus-visible,
 a:focus-visible {
   outline: 2px solid $main-color-1;
