@@ -16,6 +16,8 @@
     var mainApp = {
 
         main_fun: function () {
+            $('.js-current-year').text(new Date().getFullYear());
+
             /*====================================
                SLIDER SCRIPTS
                ======================================*/
