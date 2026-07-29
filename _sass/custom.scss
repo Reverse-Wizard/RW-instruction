@@ -1,3 +1,123 @@
 /* start custom scss snippet */
 
+:root {
+  color-scheme: dark;
+}
+
+body {
+  letter-spacing: 0;
+}
+
+.header {
+  border-bottom: 1px solid $border-color-l;
+  backdrop-filter: blur(14px);
+}
+
+.navigation__item {
+  &::after {
+    border-width: 0 0 2px;
+  }
+}
+
+.page__content {
+  animation: page-enter .35s ease-out both;
+}
+
+.article__header {
+  margin-top: map-get($spacers, 5);
+  margin-bottom: map-get($spacers, 5);
+  h1 {
+    color: $text-color-d;
+    font-weight: map-get($base, font-weight-bold);
+    letter-spacing: 0;
+  }
+}
+
+.layout--articles {
+  & > section + section {
+    padding-top: map-get($spacers, 5);
+    margin-top: map-get($spacers, 5);
+    border-top: 1px solid $border-color-l;
+  }
+  & > section > header h2 {
+    margin-bottom: map-get($spacers, 4);
+    color: $text-color-d;
+    font-size: map-get($base, font-size-h3);
+  }
+}
+
+.card {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.card__image {
+  overflow: hidden;
+  aspect-ratio: 1;
+  background: $main-color-3;
+  border: 1px solid $border-color-l;
+  border-radius: 6px;
+  cursor: pointer;
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform map-get($animation, duration-sm) ease, opacity map-get($animation, duration-sm) ease;
+  }
+}
+
+.card:hover {
+  .card__image {
+    border-color: rgba($main-color-1, .7);
+    & > img {
+      transform: scale(1.025);
+    }
+  }
+}
+
+.card--flat .card__content {
+  padding: map-get($spacers, 3) 0 0;
+}
+
+.card__header {
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.article__content {
+  a {
+    text-decoration-color: rgba($main-color-1, .55);
+    text-underline-offset: 3px;
+  }
+  blockquote {
+    border-left-color: $main-color-1;
+  }
+}
+
+.footer {
+  border-top: 1px solid $border-color-l;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid $main-color-1;
+  outline-offset: 3px;
+}
+
+@keyframes page-enter {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page__content {
+    animation: none;
+  }
+  .card__image > img {
+    transition: none;
+  }
+}
+
 /* end custom scss snippet */
