@@ -160,10 +160,6 @@ header:
 
 
 cards-tr:
-  - title: 内测版专属
-    children:
-      - title:  猩红绽放
-        url:  /tr/XINGHONGZHANFANG.html
   - title: 奥能
     children:
       - title:  双发魔弹
@@ -465,7 +461,7 @@ cards-ex:
       - title:  窃贼
         url:  /ex/QIEZEI.html
       - title:  贪婪的地精
-        url:  /ex/TANLANDEDEJING.html
+        url:  /ex/TANLANDEDIJING.html
       - title:  贼不走空
         url:  /ex/ZEIBUZOUKONG.html
       - title:  赏金猎人
@@ -514,6 +510,8 @@ cards-ex:
         url:  /ex/SHIRENHUA.html
       - title:  黑暗中的阴影
         url:  /ex/HEIANZHONGDEYINYING.html
+      - title:  骷髅骑士
+        url:  /ex/KULOUQISHI.html
   - title: IX级探索
     children:
       - title:  九命妖狐
@@ -540,6 +538,8 @@ cards-ex:
         url:  /ex/HEINVWU.html
       - title:  黑魔法学徒
         url:  /ex/HEIMOFAXUETU.html
+      - title:  窃魂魔女
+        url:  /ex/QIEHUNMONV.html
   - title: XII级探索
     children:
       - title:  噬法巨龙
